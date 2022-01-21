@@ -1,0 +1,32 @@
+:root {
+  --success-color: rgb(78, 78, 131);
+  --warning-color: rgb(172, 99, 99);
+}
+
+.button {
+  padding: 4px;
+  border-radius: 4px;
+  cursor:pointer;
+}
+
+.warningNoBorder {
+  background: none;
+  border: none;
+  color: var(--warning-color);
+  font-weight: bold;
+}
+.successNoBorder {
+  background: none;
+  border: none;
+  color: var(--success-color);
+  font-weight: bold;
+}
+
+.warning {
+  background: var(--warning-color);
+  color: white;
+}
+.success {
+  background: var(--success-color);
+  color: white;
+}
