@@ -4,7 +4,7 @@ import styles from "./CommentBody.module.css";
 const CommentBody = (props) => {
   return (
     <div className={styles.container}>
-      <p className={styles.content}>{props.content}</p>
+      <p className={styles.content}>{props.replyingTo && <span className={styles.userTag}>@{props.replyingTo} </span>}{props.content}</p>
     </div>
   );
 };

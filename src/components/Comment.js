@@ -19,7 +19,7 @@ const Comment = (props) => {
             createdAt={props.data.createdAt}
             user={props.data.user}
           />
-          <CommentBody content={props.data.content}></CommentBody>
+          <CommentBody content={props.data.content} replyingTo={props.data.replyingTo}></CommentBody>
         </div>
       </div>
       <div>
