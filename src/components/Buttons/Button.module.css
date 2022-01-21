@@ -1,6 +1,6 @@
 :root {
-  --success-color: rgb(78, 78, 131);
-  --warning-color: rgb(172, 99, 99);
+  --success-color: hsl(238, 40%, 52%);
+  --warning-color: hsl(358, 79%, 66%);
 }
 
 .button {
