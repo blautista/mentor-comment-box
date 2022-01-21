@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./CommentHeader.module.css";
+import Button from "./Buttons/Button";
 
 const CommentHeader = (props) => {
   return (
@@ -13,7 +14,7 @@ const CommentHeader = (props) => {
         <span className={styles.username}>{props.user.username}</span>
         <span className={styles.createdAt}>{props.createdAt}</span>
       </div>
-      <button>reply</button>
+      <Button text='Reply' styling='successNoBorder'/>
     </div>
   );
 };
