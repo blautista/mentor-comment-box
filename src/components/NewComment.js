@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./NewComment.module.css";
 import containerStyles from "./Comment.module.css";
+import Button from "./Buttons/Button";
 
-const NewComment = () => {
+const NewComment = (props) => {
   return (
     <div className={containerStyles.container}>
-      <div></div>
-      <textarea></textarea>
-      <button>SEND</button>
+      <img src={props.currentUser.image.png}></img>
+      <textarea className={styles.textarea} placeholder="Write your comment here"></textarea>
+      <Button text={'SEND'} styling='success'></Button>
     </div>
   );
 };

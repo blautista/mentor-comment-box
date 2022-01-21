@@ -4,6 +4,7 @@
   margin:8px;
   border-radius: 8px;
   display:flex;
+  align-items: center;
 }
 .replyContainer {
   margin-left: 50px;
