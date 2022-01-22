@@ -3,6 +3,7 @@ import styles from "./CommentHeader.module.css";
 import Button from "./Buttons/Button";
 
 const CommentHeader = (props) => {
+  
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
@@ -14,7 +15,7 @@ const CommentHeader = (props) => {
         <span className={styles.username}>{props.user.username}</span>
         <span className={styles.createdAt}>{props.createdAt}</span>
       </div>
-      <Button text='Reply' styling='successNoBorder'/>
+      <Button text='Reply' styling='successNoBorder' onClick={props.onReplyClick}/>
     </div>
   );
 };

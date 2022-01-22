@@ -7,7 +7,7 @@ const CommentSection = (props) => {
   
   return(
     <div className={styles.container}>
-      {props.comments.map(comment => <Comment key={comment.id} data={comment}></Comment>)}
+      {props.comments.map(comment => <Comment key={comment.id} currentUser={props.currentUser} data={comment}></Comment>)}
       <NewComment currentUser={props.currentUser}></NewComment>
     </div>
   );
