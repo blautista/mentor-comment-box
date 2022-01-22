@@ -16,11 +16,7 @@ const Comment = (props) => {
   };
 
   const handleReplySubmit = (textareaData) => {
-    if (textareaData.hasOwnProperty("replyingTo")) {
-      props.onReplySubmit({ ...textareaData });
-    } else {
-      props.onReplySubmit({ ...textareaData, replyingTo: props.data });
-    }
+    props.onReplySubmit({ ...textareaData, replyingTo: props.data.user.username, parentId: props.parentId || props.data.id});
     setHasReplyBoxEnabled(false);
   };
 
@@ -52,16 +48,6 @@ const Comment = (props) => {
             currentUser={props.currentUser}
           ></NewComment>
         )}
-        {props.data.replies &&
-          props.data.replies.map((reply) => (
-            <Comment
-              key={reply.id}
-              data={reply}
-              onReplySubmit={handleReplySubmit}
-              currentUser={props.currentUser}
-              isReply={true}
-            ></Comment>
-          ))}
       </div>
     </>
   );
