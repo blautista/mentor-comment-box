@@ -5,7 +5,7 @@ const Button = (props) => {
   const styling = `${styles[props.styling] || ""} ${styles.button}`;
 
   return (
-    <button type={props.type || "button"} className={styling}>
+    <button onClick={props.onClick} type={props.type || "button"} className={styling}>
       {props.text}
     </button>
   );
