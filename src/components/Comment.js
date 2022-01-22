@@ -34,6 +34,7 @@ const Comment = (props) => {
           <CommentHeader
             image={"hi"}
             createdAt={props.data.createdAt}
+            currentUser={props.currentUser}
             user={props.data.user}
             onReplyClick={handleReplyClick}
           />

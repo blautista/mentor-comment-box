@@ -24,8 +24,6 @@ const CommentSection = (props) => {
       };
       setComments((oldComments) => {
         let newCommentsState = [...oldComments];
-        console.log(newCommentsState);
-        console.log(data.replyingTo);
         for (let i = 0; i < newCommentsState.length; i++) {
           let isCurrent = newCommentsState[i].id === data.replyingTo.id;
           let isAReply = newCommentsState[i].replies.find(
