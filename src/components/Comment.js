@@ -16,7 +16,11 @@ const Comment = (props) => {
   };
 
   const handleReplySubmit = (textareaData) => {
-    props.onReplySubmit({ ...textareaData, replyingTo: props.data });
+    if (textareaData.hasOwnProperty("replyingTo")) {
+      props.onReplySubmit({ ...textareaData });
+    } else {
+      props.onReplySubmit({ ...textareaData, replyingTo: props.data });
+    }
     setHasReplyBoxEnabled(false);
   };
 
