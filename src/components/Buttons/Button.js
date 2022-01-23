@@ -2,10 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Button.module.css";
 
-/**
- * Just a good old button lmafo
- */
-
 const Button = (props) => {
   const styling = `${styles[props.styling] || ""} ${styles.button}`;
 
@@ -15,13 +11,16 @@ const Button = (props) => {
       type={props.type || "button"}
       className={styling}
     >
+      {props.icon && <img src={props.icon} alt="Button icon" />}
       {props.text}
     </button>
   );
 };
 
 Button.propTypes = {
-  text: PropTypes.string,
-}
+  type: PropTypes.oneOf(["submit", "button"]),
+  text: PropTypes.string.isRequired,
+  icon: PropTypes.string,
+};
 
 export default Button;
