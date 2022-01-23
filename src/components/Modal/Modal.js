@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './Modal.module.scss';
+import styles from './Modal.module.css';
 import Button from '../Buttons/Button';
 import ReactDOM from 'react-dom';
 

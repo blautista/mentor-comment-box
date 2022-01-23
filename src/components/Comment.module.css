@@ -1,6 +1,7 @@
 .container {
   background:hsl(228, 33%, 97%);
   padding:24px;
+  width:100%;
   margin:8px;
   border-radius: 8px;
   display:flex;

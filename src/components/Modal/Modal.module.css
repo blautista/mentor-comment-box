@@ -39,35 +39,37 @@
     flex-direction: column;
 }
 
-%footerMessage {
+.modalFooter {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+}
+.errorMessage {
     color:white;
     padding:8px;
     border-radius: 4px;
     text-align: center;
+    background:lightcoral;
+    
 }
 
-.modalFooter {
-    display:flex;
-        // flex-direction:column;
-    width:100%;
-    align-items: center;
-    justify-content: center;
-    .errorMessage {
-        @extend %footerMessage;
-        background:lightcoral;
-        
-    }
+.successMessage {
+    color:white;
+padding:8px;
+border-radius: 4px;
+text-align: center;
+    background:lightskyblue;
+}
 
-    .successMessage {
-        @extend %footerMessage;
-        background:lightskyblue;
-    }
-
-    .loadingMessage {
-        @extend %footerMessage;
-        background:white;
-        color:black;
-    }
+.loadingMessage {
+    color:white;
+padding:8px;
+border-radius: 4px;
+text-align: center;
+    background:white;
+    color:black;
 }
 
 .title {
