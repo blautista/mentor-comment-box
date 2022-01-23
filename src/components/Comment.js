@@ -15,6 +15,7 @@ const Comment = (props) => {
     : styles.replyContainer;
   const [isEditing, setIsEditing] = useState(false);
   const [content, setContent] = useState(props.data.content);
+  const [score, setScore] = useState(props.data.score);
   const [hasReplyBoxEnabled, setHasReplyBoxEnabled] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const handleReplyClick = (e) => {
@@ -45,6 +46,22 @@ const Comment = (props) => {
     props.onDelete(props.data.id);
   };
 
+  const handleUpvote = () => {
+    //api call
+    setScore((oldScore) => {
+      if (oldScore > props.data.score) return oldScore - 1;
+      else return props.data.score + 1;
+    });
+  };
+
+  const handleDownvote = () => {
+    //api call
+    setScore((oldScore) => {
+      if (oldScore < props.data.score) return oldScore + 1;
+      else return props.data.score - 1;
+    });
+  };
+
   const handleReplySubmit = (textareaData) => {
     props.onReplySubmit({
       ...textareaData,
@@ -58,7 +75,11 @@ const Comment = (props) => {
     <>
       <div className={`${styles.container} ${containerStyle}`}>
         <div>
-          <CommentVoteBox score={props.data.score}></CommentVoteBox>
+          <CommentVoteBox
+            score={score}
+            onUpvote={handleUpvote}
+            onDownvote={handleDownvote}
+          ></CommentVoteBox>
         </div>
         <div style={{ flex: 1 }}>
           <CommentHeader
