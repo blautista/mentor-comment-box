@@ -1,0 +1,8 @@
+.container {
+  font-size: 12px;
+  padding: 4px 8px 4px 8px;
+  background: hsl(238, 40%, 52%);
+  color: white;
+  display: inline-block;
+  margin-left: 8px;
+}
