@@ -4,9 +4,11 @@
 }
 
 .button {
-  padding: 4px;
   border-radius: 4px;
-  cursor:pointer;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  padding: 4px 8px 4px 8px;
 }
 
 .warningNoBorder {
@@ -25,8 +27,10 @@
 .warning {
   background: var(--warning-color);
   color: white;
+  padding: 12px 24px 12px 24px;
 }
 .success {
   background: var(--success-color);
   color: white;
+  padding: 12px 24px 12px 24px;
 }

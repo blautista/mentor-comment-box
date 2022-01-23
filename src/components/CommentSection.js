@@ -37,6 +37,27 @@ const CommentSection = (props) => {
     }
   };
 
+  const handleCommentDelete = (commentId) => {
+    console.log(commentId);
+    setComments((oldComments) => {
+      let newComments = [...oldComments];
+      for (let i = 0; i < oldComments.length; i++) {
+        if (oldComments[i].id === commentId) {
+          newComments.splice(i, 1);
+          break;
+        } else {
+          for (let j = 0; j < oldComments[i].replies.length; j++) {
+            if (oldComments[i].replies[j].id === commentId) {
+              newComments[i].replies.splice(j, 1);
+              break;
+            }
+          }
+        }
+      }
+      return newComments;
+    });
+  };
+
   return (
     <div className={styles.container}>
       {comments.map((comment) => {
@@ -45,6 +66,7 @@ const CommentSection = (props) => {
             <Comment
               key={comment.id}
               onReplySubmit={handleCommentSubmit}
+              onDelete={handleCommentDelete}
               currentUser={props.currentUser}
               isReply={false}
               data={comment}
@@ -53,6 +75,7 @@ const CommentSection = (props) => {
               <Comment
                 key={reply.id}
                 onReplySubmit={handleCommentSubmit}
+                onDelete={handleCommentDelete}
                 currentUser={props.currentUser}
                 parentId={comment.id}
                 isReply={true}

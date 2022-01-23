@@ -1,12 +1,18 @@
 .container {
-  background:hsl(228, 33%, 97%);
-  padding:24px;
-  width:100%;
-  margin:8px;
+  background: hsl(228, 33%, 97%);
+  padding: 24px;
+  width: inherit;
+  margin: 8px;
   border-radius: 8px;
-  display:flex;
+  display: flex;
   align-items: center;
 }
 .replyContainer {
   margin-left: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .replyContainer {
+    margin-left: 20px;
+  }
 }
