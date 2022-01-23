@@ -11,6 +11,10 @@
   padding: 4px 8px 4px 8px;
 }
 
+.icon {
+  margin-right: 8px;
+}
+
 .warningNoBorder {
   background: none;
   border: none;

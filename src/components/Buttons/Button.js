@@ -11,7 +11,9 @@ const Button = (props) => {
       type={props.type || "button"}
       className={styling}
     >
-      {props.icon && <img src={props.icon} alt="Button icon" />}
+      {props.icon && (
+        <img src={props.icon} alt="Button icon" className={styles.icon} />
+      )}
       {props.text}
     </button>
   );

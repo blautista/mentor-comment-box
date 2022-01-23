@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Button from "./Buttons/Button";
-import styles from "./NewComment.module.css";
+import containerStyles from "./NewComment.module.css";
+import styles from "./NewCommentForm.module.css";
 
 const NewCommentForm = (props) => {
   const textareaRef = useRef();

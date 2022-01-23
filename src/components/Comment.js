@@ -74,14 +74,14 @@ const Comment = (props) => {
   return (
     <>
       <div className={`${styles.container} ${containerStyle}`}>
-        <div>
+        <div className={styles.voteBoxContainer}>
           <CommentVoteBox
             score={score}
             onUpvote={handleUpvote}
             onDownvote={handleDownvote}
           ></CommentVoteBox>
         </div>
-        <div style={{ flex: 1 }}>
+        <div className={styles.mainContainer}>
           <CommentHeader
             image={"hi"}
             createdAt={props.data.createdAt}
