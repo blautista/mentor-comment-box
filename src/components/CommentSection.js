@@ -12,7 +12,7 @@ const CommentSection = (props) => {
     let newCommentObject = {
       id: Math.random(), //should be set by the backend
       content: data.commentBody,
-      createdAt: Date.now(),
+      createdAt: "Just now",
       score: 0,
       user: props.currentUser,
     };
