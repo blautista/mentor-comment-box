@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./CommentHeader.module.css";
 import Button from "./Buttons/Button";
+import Tag from "./Buttons/Tag";
 
 const CommentHeader = (props) => {
   return (
@@ -12,6 +13,9 @@ const CommentHeader = (props) => {
           src={props.user.image.png}
         ></img>
         <span className={styles.username}>{props.user.username}</span>
+        {props.user.username === props.currentUser.username && (
+          <Tag text="you"></Tag>
+        )}
         <span className={styles.createdAt}>{props.createdAt}</span>
       </div>
       {props.currentUser.username === props.user.username && (
