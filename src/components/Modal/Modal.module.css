@@ -13,8 +13,9 @@
 }
 
 .modal-inner {
-  width: 400px;
-  max-width: 1000px;
+  /* min-width: 300px;
+  max-width: 600px; */
+  width: 300px;
   padding: 16px;
   height: auto;
   background: white;

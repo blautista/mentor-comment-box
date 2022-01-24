@@ -12,9 +12,6 @@ const NewComment = (props) => {
       <NewCommentForm onFormSubmit={props.onFormSubmit}></NewCommentForm>
     </div>
   );
-  /**
-   * General component description in JSDoc format. Markdown is *supported*.
-   */
 };
 
 export default NewComment;

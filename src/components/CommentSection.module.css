@@ -1,8 +1,7 @@
 .container {
-  max-width:968px;
-  background:inherit;
-  display:flex;
+  max-width: 800px;
+  background: inherit;
+  display: flex;
   flex-direction: column;
-  margin:auto;
+  margin: auto;
 }
-

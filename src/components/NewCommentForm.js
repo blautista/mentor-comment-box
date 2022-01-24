@@ -13,7 +13,7 @@ const NewCommentForm = (props) => {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <textarea
         ref={textareaRef}
         className={styles.textarea}
@@ -26,7 +26,7 @@ const NewCommentForm = (props) => {
         onClick={handleSubmit}
         styling="success"
       ></Button>
-    </>
+    </div>
   );
 };
 
