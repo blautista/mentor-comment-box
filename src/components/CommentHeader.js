@@ -19,7 +19,7 @@ const CommentHeader = (props) => {
         <span className={styles.createdAt}>{props.createdAt}</span>
       </div>
       {props.currentUser.username === props.user.username && (
-        <div>
+        <div className={styles.buttonsContainer}>
           <Button
             text="Delete"
             styling="warningNoBorder"
@@ -35,12 +35,14 @@ const CommentHeader = (props) => {
         </div>
       )}
       {props.currentUser.username !== props.user.username && (
-        <Button
-          icon="./images/icon-reply.svg"
-          text="Reply"
-          styling="successNoBorder"
-          onClick={props.onReplyClick}
-        />
+        <div className={styles.buttonsContainer}>
+          <Button
+            icon="./images/icon-reply.svg"
+            text="Reply"
+            styling="successNoBorder"
+            onClick={props.onReplyClick}
+          />
+        </div>
       )}
     </div>
   );

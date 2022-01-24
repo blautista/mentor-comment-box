@@ -12,7 +12,9 @@
 }
 
 .username {
+  padding-left: 8px;
   font-weight: bold;
+  color: hsl(212, 24%, 26%);
 }
 
 .createdAt {
@@ -24,4 +26,18 @@
   height: 30px;
   width: 30px;
   margin-right: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .infoContainer {
+    order: 1;
+  }
+  .buttonsContainer {
+    margin-bottom: 8px;
+    /* align-self: flex-end; */
+  }
 }
