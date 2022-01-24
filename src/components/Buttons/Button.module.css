@@ -1,5 +1,5 @@
 :root {
-  --success-color: hsl(238, 40%, 52%);
+  --success-color: hsl(211, 10%, 45%);
   --warning-color: hsl(358, 79%, 66%);
 }
 
@@ -34,6 +34,11 @@
   padding: 12px 24px 12px 24px;
 }
 .success {
+  background: var(--success-color);
+  color: white;
+  padding: 12px 24px 12px 24px;
+}
+.cancel {
   background: var(--success-color);
   color: white;
   padding: 12px 24px 12px 24px;

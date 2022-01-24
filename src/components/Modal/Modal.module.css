@@ -34,9 +34,15 @@
   align-items: center;
 }
 
+.modalHeader h1 {
+  margin: 0;
+}
+
 .modalBody {
+  margin: 8px 0px 8px 0px;
   display: flex;
   flex-direction: column;
+  color: hsl(207, 11%, 19%);
 }
 
 .modalFooter {
